@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func GenDisplaceFn(a, vo, so float64) func(float64) float64 {
 	return func(t float64) float64 {
@@ -16,7 +14,7 @@ func getValue(prompt string) float64 {
 	fmt.Print(prompt)
 	_, err := fmt.Scan(&input)
 	if err != nil {
-		fmt.Println("error reading acceleration value", err)
+		fmt.Println("error reading value", err)
 	}
 
 	return input
